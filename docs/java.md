@@ -9,7 +9,7 @@ A documentação sobre a linguagem Java encontra-se dividida nas seguintes secç
 1. [Sintaxe](/javasintaxe)
 1. [Expressões](/javaexpressoes)
 1. [Fluxo de Controle](/javafluxocontrole)
-1. [Input e Output](/javainputoutput)
+1. [Input e Output](/javaoutputinput)
 1. [Arrays](/javaArrays)
 1. [Exercicios Básicos de Java](/javaexerciciosbasicos)
 
