@@ -38,9 +38,9 @@ onde conste o resultado.
 
 ### Problema 5
 
-Escreva um programa que declara duas variáveis int **x e y** e calcula o seu máximo e mínimo.
-O programa deve inicializar essas variáveis com valores que são recebidos pela a consola. e imprimir uma mensagem
-onde conste o resultado.
+Escreva um programa que declara duas variáveis int **x e y** e indique qual desta variaveis tem o valor maior e menor
+O programa deve inicializar essas variáveis com valores que são recebidos pela a consola e imprimir uma mensagem
+onde mostre o resultado.
 
 ### Problema 6
 
@@ -54,12 +54,12 @@ Escreva um programa que recebe na consola um nome de uma pessoa  e imprime uma m
 ## Fluxo de Controlo
 
 
-### Problema 7
+### Problema 8
 
 Escreva um pedaço de código que declara uma variável int **mes** cujo valor será entre 1 e 12 e
 escreve por extenso o nome do mês. O programa deve inicializar a variável com valor valor que é recebido pela a consola.
 
-### Problema 8 
+### Problema 9
 
 Quantas vezes é executado o corpo dos seguintes ciclos **for**
 
@@ -70,11 +70,11 @@ Quantas vezes é executado o corpo dos seguintes ciclos **for**
 * for (int i = 0; i > 0; i--)
 *  for (int i = 1; i > 0; i++)
 
-### Problema 9 
+### Problema 10 
 
 Escreve um programa que conta o numero de caracteres A,C,T,G  da String S="ATGCTTCAGAAAGGTCTTACG" e imprime uma mensagem com esses valores. 
 
-### Problema 10
+### Problema 11
 
 Uma string de RNA é uma string formada a partir do alfabeto contendo 'A', 'C', 'G' e 'U'.
 Dada uma cadeia de DNA S="ATGCTTCAGAAAGGTCTTACG", transcreve para uma cadeia de RNA, onde se deve substituir todas as letras **T** pela a letra **U**.
@@ -83,17 +83,17 @@ Imprima uma mensagem com o resultado.
 
 ## Arrays
 
-### Problema 11
-
-Escreve um programa que leia cinco nomes da consola , e depois imprima esses nomes na ordem
-inversa em que foram inseridos pelo o utilizador.
-
 ### Problema 12
 
 Escreve um programa que leia cinco nomes da consola , e depois imprima esses nomes na ordem
 inversa em que foram inseridos pelo o utilizador.
 
 ### Problema 13
+
+Escreve um programa que leia cinco nomes da consola , e depois imprima esses nomes na ordem
+inversa em que foram inseridos pelo o utilizador.
+
+### Problema 14
 
 Escreva um programa que recebe da consola 10 valores int  e armazene-os num
 array.

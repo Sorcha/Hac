@@ -4,7 +4,7 @@
 
 Este site apresenta documentação sobre os preparativo para as Olimpidas da Informaticia 2019.
 Esta documentação encontra-se dividada nas seguintes secções:
-* [Introdução ao java](/java) 
+* [Introdução ao java](/java/java) 
 * [Introdução aos Algorithmos](/algorithms) - Ainda não esta criada;
 * [Exercicios e Problemas](/javaexercicios)
 * [Desafios das passadas edicções das Olimpidas](/desafios) - Ainda não esta criada;

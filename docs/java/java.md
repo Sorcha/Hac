@@ -6,12 +6,12 @@ Nesta secção irá ser abordado como se "monta" o ambiente de desenvolvimento e
 
 A documentação sobre a linguagem Java encontra-se dividida nas seguintes secções:
 
-1. [Sintaxe](/javasintaxe)
-1. [Expressões](/javaexpressoes)
-1. [Fluxo de Controle](/javafluxocontrole)
-1. [Input e Output](/javaoutputinput)
-1. [Arrays](/javaArrays)
-1. [Exercicios Básicos de Java](/javaexerciciosbasicos)
+1. [Sintaxe](/java/javasintaxe)
+1. [Expressões](/java/javaexpressoes)
+1. [Fluxo de Controle](/java/javafluxocontrole)
+1. [Input e Output](/java/javaoutputinput)
+1. [Arrays](/java/javaArrays)
+1. [Exercicios Básicos de Java](/java/javaexerciciosbasicos)
 
 ## Estrutura de um código em Java
 
@@ -84,6 +84,8 @@ Caso não seja pretendido instalar o JDK no pc, pode usar o IDE online para prog
 
 * [Java IDE Online](https://repl.it/repls/ExpertHarshUnits)
 
+## Compilação de Programas
+
 ### Abrir a Consola de Comandos
 
 #### Pelo o campo de pesquisa do Windows
@@ -92,7 +94,7 @@ Caso não seja pretendido instalar o JDK no pc, pode usar o IDE online para prog
 
 * Passo 2 - Introduz no campo de pesquisa a palavra "cmd" e vai-te aparecer na listagem o programa "Prompt de Comando" ou "Linha de comandos". A imagem mostra o icon do programa. 
 
-![Image of windows pesquisa](/images/windows_search.png)
+![Image of windows pesquisa](../images/windows_search.png)
 
 * Passo 3 - Por fim, selecciona o programa e ele vai-te abrir a linha de comandos.
 
@@ -101,18 +103,18 @@ Caso não seja pretendido instalar o JDK no pc, pode usar o IDE online para prog
 
 * Passo 1 - Clica no menu **Iniciar** e depois na opção **Todas as Aplicações**
 
-![Image of windows iniciar](/images/windows_iniciar.png)
+![Image of windows iniciar](../images/windows_iniciar.png)
 
 * Passo 2 - Vai à pasta de **Sistema Do Windows** e clica na opção **Prompt de Comando** ou **Linha de Comando** ou outra que tenha o mesmo icon.
 
-![Image of windows apps](/images/windows_apps.png)
+![Image of windows apps](../images/windows_apps.png)
 
 #### Opção da power-shell
 
 Se tiveres dentro da pasta onde tens guardado os teus ficheiro *.java* podes abrir a linha de comandos directamente na pasta.
 Para useres essa opção, abre a pasta, mantem a tecla **Shift** do teclado pressionada, clica com o botão direito do rato dentro da pasta e selecciona a opção **Abrir a janela de comando aqui** ou **Abrir a PowerShell**.
 
-![Image of windows apps](/images/windows_powershell.png)
+![Image of windows apps](../images/windows_powershell.png)
 
 A **PowerShell** é igual à linha de comandos.
 
@@ -149,7 +151,7 @@ C:\NomeDaPastaOndeEstaOFicheiro> javac OlaMundo.java
 C:\NomeDaPastaOndeEstaOFicheiro> 
 ```
 
-#### Executar um programa Java
+## Executar um programa Java
 
 Depois de o processo de compilação do programa ser um sucesso é possivel executar o programa. Para executar o programa é basta executar o comando **_java_** passando como parametro o nome do programa sem extensão **.java**.
 
@@ -162,7 +164,7 @@ C:\NomeDaPastaOndeEstaOFicheiro>
 
 ### Usar o IDE Java Online
 
-![Image of IDEJavaOnline](/images/OlaMundo_JavaIDEOnline.png)
+![Image of IDEJavaOnline](../images/OlaMundo_JavaIDEOnline.png)
 
 1. Ficheiro onde se encontra o programa.
 1. O código do programa.
