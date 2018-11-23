@@ -29,8 +29,61 @@ fim_algoritmo
 ```
 ```.java
 
+import java.util.*;
 
+public class SelectionSort
+{
 
+    public static void main(String [] args)
+    {
+        int [] X = new int[5];
+        int indiceDoArray,j, eleito, menor, pos;
+        Scanner sc = new Scanner(System.in);
+        
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<=4;i++)
+        {
+            X[i] = sc.nextInt();
+        }
+            
+        // ordenar o array em forma crescente
+        // Percorrer desde a primeira posicao à penultima posicao do array
+        // elegendo um numero para ser comparado
+        for(indiceDoArray=0;indiceDoArray<=4;indiceDoArray++)
+        {
+            eleito = X[indiceDoArray];
+            
+            // encontrar o menor numero à direita do eleito com a sua posicao
+            menor = X[indiceDoArray + 1]
+            pos = indiceDoArray + 1;
+            
+            // Percorrer os elementos que estao a direita do eleito
+            // retornando o menor numero a sua direita e a sua posicao
+            for(j>=indiceDoArray+2 ; j<=4; j++)
+            {
+                if(X[j] < menor)
+                {
+                    menor = X[j];
+                    pos = j;
+                }
+            }
+                    
+            // trocar o numero eleito com o numero da posicao pos
+            // o numero da posicao pos e menor numero a direita do eleito
+            if(menor < eleito)
+            {
+                X[i] = X[pos];
+                X[pos] = eleito;
+            }
+        }  
+                    
+        //Mostrar os elementos do array ordenados em forma crescente
+        for(int i = 0; i<=4; i++)
+        {
+            System.out.println((i+1) + "º numero: " + X[i]);
+        }   
+    }
+}
 ```
 
 As ilustrações seguintes demonstram a execução do algoritmo **Selection Sort** para uma ordenação crescente de um array com __5__ elementos.
