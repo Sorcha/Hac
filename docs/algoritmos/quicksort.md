@@ -57,6 +57,86 @@ fim
 fim_função_quickSort
 ```
 
+```.java
+
+import java.util.*;
+
+public class QuickSort
+{
+
+    public static void main(String [] args)
+    {
+        int [] X = new int[9];
+        int indiceDoArray;
+        Scanner sc = new Scanner(System.in);
+        
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<=9;i++)
+        {
+            X[i] = sc.nextInt();
+        }
+        
+        // ordenar o array em forma crescente
+        quicksort(X,0,9);
+        
+        //Mostrar os elementos do array ordenados em forma crescente
+        for(int i = 0; i<=4; i++)
+        {
+        System.out.println((i+1) + "º numero: " + X[i]);
+        }
+    }
+    
+    public static void quicksort(int X[i], int p, int r)
+    {
+        int q;
+        if(p<r)
+        {
+            q = particao(X,p,r);
+            quicksort(X,p,q);
+            quicksort(X,q+1,r);
+        }
+    }
+    
+    public static int particao(int X[], int p, int r)
+    {
+        int pivo, i, j;
+        pivo = X[(p+r)/2];
+        i = p-1;
+        j = r+1;
+        
+        while(i<j)
+        {
+            do
+            {
+                j = j - 1;
+            }while(X[j] > pivo);
+            
+            do
+            {
+                i = i + 1;
+            }while(X[i]< pivo);
+            
+            if(i<j)
+            {
+                troca(X,i,j);
+            }
+        }
+        return j;
+    }
+    
+    public static void troca(X,int p, int r)
+    {
+        int aux;
+        aux = X[i];
+        X[i] = X[j];
+        X[j] = X[i];
+    }
+
+}
+
+```
+
+
 As ilustrações seguintes demonstram a execução do algoritmo **Merge Sort** para uma ordenação crescente de um array com __5__ elementos.
 
 1. 1ª Execução
