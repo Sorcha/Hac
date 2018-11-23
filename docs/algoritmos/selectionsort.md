@@ -27,6 +27,12 @@ inicio
 fim
 fim_algoritmo
 ```
+```.java
+
+
+
+```
+
 As ilustrações seguintes demonstram a execução do algoritmo **Selection Sort** para uma ordenação crescente de um array com __5__ elementos.
 
 1. **1ª execução do FOR**
