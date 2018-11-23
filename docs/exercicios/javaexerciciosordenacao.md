@@ -10,17 +10,13 @@ Dada a sequência de números: 3 4 9 2 5 8 2 1 7 4 6 2 9 8 5 1, ordene-a em form
 decrescente segundo os seguintes algoritmos, apresentando a sequência obtida após
 cada passo do algoritmo:
 1. Selection Sort 
-1. QuickSort
+1. Bubble Sort
 
 ### Problema 2
 
-Cria um programa que leia **n** inteiro inserindo-os em num array de forma ordenada crescente utilizando o algoritmo da **insertion sort**. No final, imprimi os numeros ordenados.
+Cria um programa que leia **n** inteiro inserindo-os em num array de forma ordenada crescente utilizando o algoritmo da **Insertion sort**. No final, imprimi os numeros ordenados.
 
 ### Problema 3
-
-Cria um programa que leia **n** inteiro inserindo-os em num array. Efectua a ordenação de forma decrescente usando o algoritmo **Bublle Sort**.
-
-### Problema 4 
 
 Chegou o dia da inauguração da biblioteca da Dona Alexandra. Finalmente! O Gabriel não pensava noutra coisa desde que soube da sua abertura. Podiam pensar que ele é um miúdo mesmo aplicado como tu e eu, mas na verdade ele tem outros interesses...
 
