@@ -72,7 +72,7 @@ public class SelectionSort
             // o numero da posicao pos e menor numero a direita do eleito
             if(menor < eleito)
             {
-                X[i] = X[pos];
+                X[indiceDoArray] = X[pos];
                 X[pos] = eleito;
             }
         }  
