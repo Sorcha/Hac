@@ -49,7 +49,7 @@ public class SelectionSort
         // ordenar o array em forma crescente
         // Percorrer desde a primeira posicao à penultima posicao do array
         // elegendo um numero para ser comparado
-        for(indiceDoArray=0;indiceDoArray<=4;indiceDoArray++)
+        for(indiceDoArray=0;indiceDoArray<4;indiceDoArray++)
         {
             eleito = X[indiceDoArray];
             
@@ -59,7 +59,7 @@ public class SelectionSort
             
             // Percorrer os elementos que estao a direita do eleito
             // retornando o menor numero a sua direita e a sua posicao
-            for(j>=indiceDoArray+2 ; j<=4; j++)
+            for(j=indiceDoArray+2 ; j<=4; j++)
             {
                 if(X[j] < menor)
                 {
