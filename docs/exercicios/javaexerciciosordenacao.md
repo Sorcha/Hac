@@ -69,11 +69,126 @@ public class Exercicio1
 
 ```
 
+
+
+</details>
+
+<details>
+<summary>Solução do exercicio para BubbleSort</summary>
+
+```.java
+
+import java.util.*;
+
+public class Exercicio1
+{
+
+    public static void main(String [] args)
+    {
+        int [] sequencia = new int[]{3,4,9,2,5,8,2,1,7,4,6,2,9,8,5,1};
+        int indiceCurrente, variavelAuxiliar, troca;
+        
+        // ordenar o array em forma Decrescente
+        // Percorrer os elementos do array enquanto existir trocas de posicoes
+        indiceCurrente=1;
+        troca = 1;
+        while(indiceCurrente<=sequencia.length && troca == 1)
+        {
+            troca = 0;
+            //Percorrer o array ate a penultima posicao
+            for(int i=0;i<=sequencia.length-2;i++)
+            {
+                if(sequencia[i]<sequencia[i+1])
+                {
+                    troca = 1;
+                    variavelAuxiliar = sequencia[i];
+                    sequencia[i]=sequencia[i+1];
+                    sequencia[i+1] = variavelAuxiliar;
+                }
+            }
+            indiceCurrente += 1;
+        }
+        
+        
+        //Mostrar os elementos do array ordenados em forma decrescente
+        for(int i = 0; i<sequencia.length; i++)
+        {
+            System.out.println((i+1) + "º numero: " + sequencia[i]);
+        }
+    
+    }
+
+}
+
+
+```
+
+
+
 </details>
 
 ### Problema 2
 
-Cria um programa que leia **n** inteiro inserindo-os em num array de forma ordenada crescente utilizando o algoritmo da **Insertion sort**. No final, imprimi os numeros ordenados.
+Cria um programa que leia **n** inteiro inserindo-os em num array de forma ordenada crescente utilizando o algoritmo da **Insertion sort**. No final, imprimir os numeros ordenados.
+
+<details>
+<summary>Solução do exercicio</summary>
+
+```.java
+
+import java.util.*;
+
+public class Exercicio2
+{
+
+    public static void main(String [] args)
+    {
+        int indiceDoArray,j, eleito;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Introduza o numero de valores que pretende utilizar");
+        int n = sc.nextInt();
+        int [] valores = new int[n];
+        
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Introduza o " + (i+1) + "º valor.");
+            valores[i] = sc.nextInt();
+        }
+        
+        // ordenar o array em forma crescente
+        // Percorrer os elementos do array desde da posicao 1 até à sua ultima posicao
+        for(int i = 1;i<=valores.length-1;i++)
+        {
+            eleito = valores[i];
+            j = i - 1;
+            // percorrer os elementos que estão à esquerda do eleito ou até encontrar
+            // a posição para recolocacao do eleito respeitando a ordenação que pretende
+            while(j>=0 && valores[j] > eleito)
+            {
+                valores[j+1] = valores[j];
+                j = j-1;
+            }
+            valores[j+1] = eleito;
+        }
+        
+        //Mostrar os elementos do array ordenados em forma crescente
+        for(int i = 0; i<valores.length; i++)
+        {
+            System.out.println((i+1) + "º numero: " + valores[i]);
+        }
+    }
+
+}
+
+
+
+```
+
+
+
+</details>
 
 ### Problema 3
 
@@ -95,6 +210,85 @@ Segue-se uma linha com **N** inteiros **P_i**, que representam o número de pág
 
 O output deve conter uma linha com apenas um inteiro, que representa o número mínimo de livros que o Gabriel tem de ler.
 
+
+```java
+
+import java.util.*;
+
+
+public class Exercicio3
+{
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+    
+        int numeroLivros = sc.nextInt();
+        int numeroDePontos = sc.nextInt();
+        
+        int [] livros = new int[numeroLivros];
+        
+        for (int i = 0;i<numeroLivros  ; i++ )
+        {
+            livros[i]=sc.nextInt();
+        }
+        
+        quicksort(livros,0,numeroLivros-1);
+        
+        int pontos=0;
+        for (int i= 0; i<numeroLivros ;i++ )
+        {
+            pontos+=livros[i];
+            if(pontos>=numeroDePontos)
+            {
+                System.out.println((i+1));
+                break;
+            }
+    
+        }
+    }
+
+
+    public static void quicksort(int [] X, int p, int r)
+    {
+        int q;
+        if(p<r)
+        {
+            q = particao(X,p,r);
+            quicksort(X,p,q-1);
+            quicksort(X,q+1,r);
+        }
+    }
+
+    public static int particao(int [] X, int p, int r)
+    {
+        int pivot = X[r];
+        int i = (p-1);
+    
+        for (int j = p; j < r; j++) 
+        {
+            if (X[j] <= pivot)
+            {
+                i++;
+                troca(X,i,j);
+            }
+        }
+    
+        troca(X,i+1,r);
+        return i+1;
+    }
+    
+    public static void troca(int [] X,int i, int j)
+    {
+        int aux;
+        aux = X[i];
+        X[i] = X[j];
+        X[j] = aux;
+    }
+
+}
+
+
+```
 
 
 

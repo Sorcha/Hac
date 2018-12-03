@@ -5,6 +5,9 @@
 Este algoritmo de ordenação são efectuadas comparações entre os dados armazenados num array/vector de têm tamanho **N**. 
 Cada elemento que se encontra na posição **i** será comparado com o elemento da posição **i+1**, e quando é encontrada a ordenação que se pretende (crescente ou decrescente) é efectuada a troca de posições dos elementos.
 
+
+
+
 ```pseudocode
 inicio_algoritmo
 declaro X[N],n,i,aux como valores numericos // N é o numero de elementos de estão armazenados
@@ -23,7 +26,7 @@ fim
 fim_algoritmo
 ```
 
-```.java
+```java
 
 import java.util.*;
 
@@ -32,37 +35,37 @@ public class BubbleSortNaoMelhorada
 
     public static void main(String [] args)
     {
-    int [] X = new int[5];
-    int indiceDoArray,j, eleito;
-    Scanner sc = new Scanner(System.in);
-    
-    //obter os numeros para introduzir no array/vector
-    for(int i=0;i<=4;i++)
-    {
-    X[i] = sc.nextInt();
-    }
-    
-    // ordenar o array em forma crescente
-    // Percorrer os elementos do array desde da posicao 1 até à sua ultima posicao
-    for(indiceDoArray=1;indiceDoArray<=4;indiceDoArray++)
-    {
-    eleito = X[indiceDoArray];
-    j = indiceDoArray - 1;
-    // percorrer os elementos que estão à esquerda do eleito ou até encontrar
-    // a posição para recolocacao do eleito respeitando a ordenação que pretende
-    while(j>=0 && X[j] > eleito)
-    {
-    X[j+1] = X[j];
-    j = j-1
-    }
-    X[j+1] = eleito;
-    }
-    
-    //Mostrar os elementos do array ordenados em forma crescente
-    for(int i = 0; i<=4; i++)
-    {
-    System.out.println((i+1) + "º numero: " + X[i]);
-    }
+        int [] X = new int[5];
+        int aux;
+        Scanner sc = new Scanner(System.in);
+        
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<X.length;i++)
+        {
+            X[i] = sc.nextInt();
+        }
+        
+        // ordenar o array em forma crescente
+        // Percorrer os elementos do array desde da posicao 1 até à sua ultima posicao
+        for(int n=1;n<X.length;n++)
+        {
+            //Percorrer desde a primeira posicao até a penultima posicao do array
+            for(int i=0;i<=X.length-2;i++)
+            {
+                if(X[i]>X[i+1])
+                {
+                    aux = X[i];
+                    X[i] = X[i+1];
+                    X[i+1] = aux;
+                }
+                }
+        }
+        
+        //Mostrar os elementos do array ordenados em forma crescente
+        for(int i = 0; i<X.length; i++)
+        {
+            System.out.println((i+1) + "º numero: " + X[i]);
+        }
     }
     
 }
@@ -111,6 +114,56 @@ inicio
 fim
 fim_algoritmo
 ```
+
+
+```.java
+
+import java.util.*;
+
+public class BubbleSortMelhorada1
+{
+    
+    public static void main(String [] args)
+    {
+        int [] X = new int[5];
+        int aux;
+        Scanner sc = new Scanner(System.in);
+    
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<X.length;i++)
+        {
+            X[i] = sc.nextInt();
+        }
+    
+        // ordenar o array em forma crescente
+        // Percorrer os elementos do array desde da posicao 1 até à sua ultima posicao
+        for(int j=1;j<=X.length-1;j++)
+        {
+    
+            //Percorrer da ultima posicao à posicao j do vector
+            for(int i=X.length-1;i>=j;i--)
+            {
+                if(X[i]<X[i-1])
+                {
+                    aux = X[i];
+                    X[i] = X[i-1];
+                    X[i-1] = aux;
+                }
+            }
+        }
+    
+        //Mostrar os elementos do array ordenados em forma crescente
+        for(int i = 0; i<X.length; i++)
+        {
+            System.out.println((i+1) + "º numero: " + X[i]);
+        }
+    
+    }
+
+}
+
+```
+
 As ilustrações seguintes demonstram a execução do algoritmo **Buuble Sort** da versão melhorada para uma ordenação crescente de um array com __5__ elementos.
 
 1. **1ª execução do FOR (n=1)**
@@ -155,6 +208,58 @@ inicio
 fim
 fim_algoritmo
 ```
+```.java
+
+import java.util.*;
+
+public class BubbleSortMelhorada2
+{
+
+    public static void main(String [] args)
+    {
+        int [] X = new int[5];
+        int n, aux, troca;
+        Scanner sc = new Scanner(System.in);
+        
+        //obter os numeros para introduzir no array/vector
+        for(int i=0;i<X.length;i++)
+        {
+            X[i] = sc.nextInt();
+        }
+        
+        // ordenar o array em forma Decrescente
+        // Percorrer os elementos do array enquanto existir trocas de posicoes
+        n=1;
+        troca = 1;
+        while(n<=X.length && troca == 1)
+        {
+            troca = 0;
+            for(int i=0;i<=X.length-2;i++)
+            {
+                if(X[i]<X[i+1])
+                {
+                    troca = 1;
+                    aux = X[i];
+                    X[i]=X[i+1];
+                    X[i+1] = aux;
+                }
+            }
+            n = n + 1;
+        }
+        
+        
+        //Mostrar os elementos do array ordenados em forma decrescente
+        for(int i = 0; i<X.length; i++)
+        {
+            System.out.println((i+1) + "º numero: " + X[i]);
+        }
+
+    }
+
+}
+
+```
+
 As ilustrações seguintes demonstram a execução do algoritmo **Bubble Sort** da 2ª versão melhorada para uma ordenação decrescente de um array com __5__ elementos.
 
 1. **1ª execução do FOR (n=1 e troca = 1)**

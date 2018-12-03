@@ -66,73 +66,65 @@ public class QuickSort
 
     public static void main(String [] args)
     {
-        int [] X = new int[9];
-        int indiceDoArray;
+        int [] X = new int[10];
         Scanner sc = new Scanner(System.in);
-        
+
         //obter os numeros para introduzir no array/vector
-        for(int i=0;i<=9;i++)
+        for(int i=0;i<X.length;i++)
         {
-            X[i] = sc.nextInt();
+          X[i] = sc.nextInt();
         }
-        
+
         // ordenar o array em forma crescente
-        quicksort(X,0,9);
-        
+        quicksort(X,0,X.length-1);
+
         //Mostrar os elementos do array ordenados em forma crescente
-        for(int i = 0; i<=4; i++)
+        for(int i = 0; i<X.length; i++)
         {
-        System.out.println((i+1) + "º numero: " + X[i]);
+            System.out.println((i+1) + "º numero: " + X[i]);
         }
     }
-    
-    public static void quicksort(int X[i], int p, int r)
+
+    public static void quicksort(int [] X, int p, int r)
     {
         int q;
         if(p<r)
         {
             q = particao(X,p,r);
-            quicksort(X,p,q);
+            quicksort(X,p,q-1);
             quicksort(X,q+1,r);
         }
     }
-    
-    public static int particao(int X[], int p, int r)
+
+    public static int particao(int [] X, int p, int r)
     {
-        int pivo, i, j;
-        pivo = X[(p+r)/2];
-        i = p-1;
-        j = r+1;
-        
-        while(i<j)
+        int pivot = X[r];
+        int i = (p-1);
+
+        for (int j = p; j < r; j++) 
         {
-            do
+            if (X[j] <= pivot)
             {
-                j = j - 1;
-            }while(X[j] > pivo);
-            
-            do
-            {
-                i = i + 1;
-            }while(X[i]< pivo);
-            
-            if(i<j)
-            {
+                i++;
+                
                 troca(X,i,j);
             }
         }
-        return j;
+
+        troca(X,i+1,r);
+        return i+1;
     }
-    
-    public static void troca(X,int p, int r)
+
+    public static void troca(int [] X,int i, int j)
     {
         int aux;
         aux = X[i];
         X[i] = X[j];
-        X[j] = X[i];
+        X[j] = aux;
     }
 
 }
+
 
 ```
 
